@@ -1,0 +1,169 @@
+/* Modal */
+.overlay {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.modalContainer {
+    width: 276px;
+    height: 280px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: #22644d;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+
+.modalRight {
+    width: 100%;
+}
+
+.closeBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 7px 5px;
+    gap: 10px;
+
+    position: absolute;
+    left: 30.8%;
+    right: 26.81%;
+    top: 76.43%;
+    bottom: 6.79%;
+
+    background: rgba(53, 201, 144, 0.25);
+    border-radius: 15px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.transaction_header {
+    position: absolute;
+    left: 15.58%;
+    right: 11.59%;
+    top: 6.43%;
+    bottom: 82.86%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.h1 {
+    position: absolute;
+    left: 9.42%;
+    right: 63.41%;
+    top: 26.43%;
+    bottom: 63.93%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.h2 {
+    position: absolute;
+    left: 9.42%;
+    right: 70.29%;
+    top: 41.43%;
+    bottom: 48.93%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.h3 {
+    position: absolute;
+    left: 9.42%;
+    right: 63.04%;
+    top: 56.43%;
+    bottom: 33.93%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.colon {
+    position: absolute;
+    left: 43.12%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.h1-input {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    /* identical to box height */
+    bottom: 63.93%;
+    color: black;
+    background: transparent;
+}
+
+@media screen and (max-width: 500px) {
+    .modalContainer {
+        width: 276px;
+        height: 280px;
+        position: relative;
+        top: 40%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        background: linear-gradient(192.05deg, #550768 0%, #097D97 100%, #097D97 100%);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+    }
+}

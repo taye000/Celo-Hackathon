@@ -1,0 +1,116 @@
+.Home-Profile-btn {
+    position: fixed;
+    width: 300px;
+    height: 54px;
+    right: 10px;
+    top: 65px;
+    display: flex;
+}
+
+.profile {
+    top: 5px;
+    left: 10px;
+    border: none;
+    background: transparent;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 67px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.profile a {
+    color: white;
+}
+
+nav {
+    position: fixed;
+    width: 400px;
+    height: 55px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 165px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+}
+
+.buy-button {
+    position: absolute;
+    width: max-content;
+    height: 30px;
+    left: 32px;
+    top: 14px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #188302;
+    border: none;
+    background: transparent;
+}
+
+.transfer-button {
+    position: absolute;
+    width: max-content;
+    height: 30px;
+    right: 32px;
+    top: 14px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #188302;
+    border: none;
+    background: transparent;
+}
+
+.sell_btn {
+    position: absolute;
+    width: max-content;
+    height: 30px;
+    left: 170px;
+    top: 14px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #b11a07;
+    border: none;
+    background: transparent;
+}
+
+nav a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border-bottom: none;
+}
+
+.active {
+    border-bottom: 5px solid #479E7F;
+    color: #479E7F;
+}
+
+nav a:hover {
+    color: #479E7F;
+}
+
+@media screen and (max-width: 992px) {
+    .Home-Profile-btn {
+        position: fixed;
+        width: max-content;
+        height: max-content;
+        right: 20px;
+        top: 20px;
+        display: flex;
+    }
+}

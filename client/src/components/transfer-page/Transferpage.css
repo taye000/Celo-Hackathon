@@ -1,0 +1,189 @@
+.transfer-page {
+    position: center;
+    width: max-content;
+    height: 100vh;
+    background: linear-gradient(227.99deg, #49224b -5.73%, #2c2070 86.41%);
+
+}
+
+.menu-icon {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 10%;
+    bottom: 15%;
+
+    background: #F8F8F8;
+}
+
+.header_name {
+    position: absolute;
+    width: 271px;
+    height: 54px;
+    left: 162px;
+    top: 65px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+}
+
+.transfer-box {
+    position: absolute;
+    width: 323px;
+    height: 133px;
+    left: 41px;
+    top: 269px;
+
+    background: #D9D9D9;
+    border-radius: 25px;
+}
+
+.recipient-box {
+    position: absolute;
+    width: 1112px;
+    height: 165px;
+    top: 725px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #D9D9D9;
+    border-radius: 25px;
+}
+
+.input_address {
+    position: absolute;
+    width: 385px;
+    height: 79px;
+    left: 55px;
+    top: 86px;
+    border: none;
+    outline: 0ch;
+    background: transparent;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+
+    color: #000000;
+}
+
+.to-Text {
+    position: absolute;
+    width: 75px;
+    height: 35px;
+    left: 55px;
+    top: 15px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+
+    color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+    .recipient-box {
+        position: absolute;
+        width: 450px;
+        height: 124px;
+        top: 558px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: #D9D9D9;
+        border-radius: 25px;
+    }
+
+    .to-Text {
+        position: absolute;
+        width: 22px;
+        height: 27px;
+        left: 12px;
+        top: 15px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+
+        color: #000000;
+    }
+
+    .input_address {
+        position: absolute;
+        width: 385px;
+        height: 79px;
+        left: 12px;
+        top: 50px;
+        border: none;
+        outline: 0ch;
+        background: transparent;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 27px;
+
+        color: #000000;
+    }
+
+    .header_name {
+        position: absolute;
+        width: 271px;
+        height: 54px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 65px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header_name {
+        position: absolute;
+        width: max-content;
+        height: 54px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 80px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        color: #FFFFFF;
+    }
+
+    .logo-button {
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        left: 20px;
+        top: 30px;
+        border-radius: 50%;
+
+        background: radial-gradient(100% 100% at 50.45% 0%, #85CAB1 0%, #BAEEDC 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        ;
+    }
+}

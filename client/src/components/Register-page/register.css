@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.register-top-vector3 {
+    position: absolute;
+    width: 334px;
+    height: 334px;
+    left: 207px;
+    top: -93px;
+
+    background: linear-gradient(227.99deg, #F3FBF8 -5.73%, #D3FFEF 86.41%);
+    filter: blur(400px);
+}
+
+.register_header {
+
+    position: absolute;
+    width: max-content;
+    height: 54px;
+    left: 162px;
+    top: 254px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+}
+
+.register-username {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    left: 100px;
+    top: 321px;
+    padding-left: 10px;
+
+    font-size: large;
+    font-family: 'poppins';
+
+    background: #F3FBF8;
+    border-radius: 25px;
+}
+
+
+.register-phnumber {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 100px;
+    top: 381px;
+    padding-left: 10px;
+
+
+    font-size: large;
+    font-family: 'poppins';
+
+    background: #F3FBF8;
+    border-radius: 25px;
+}
+
+.register-email {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 100px;
+    top: 441px;
+    padding-left: 10px;
+
+
+    font-size: large;
+    font-family: 'poppins';
+
+    background: #F3FBF8;
+    border-radius: 25px;
+}
+
+.register-password {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 100px;
+    top: 501px;
+    padding-left: 10px;
+
+
+    background: #F3FBF8;
+    border-radius: 25px;
+    font-size: large;
+    font-family: 'poppins';
+}
+
+
+.button-container {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    top:580px !important;
+    padding-right: 90px;
+
+}
+
+.checkboxButton {
+    position: relative;
+    width: 87px;
+    height: 40px;
+    left: 50px;
+    top: 520px;
+    border-radius: 25px;
+
+}
+
+
+.button {
+    position: absolute;
+    width: 87px;
+    height: 40px;
+    right: 1px;
+    top: 1px;
+    background: linear-gradient(264.12deg, #D3FFEF 1.87%, #7EE0BD 60.67%);
+    box-shadow: 0px 4px 4px 2px #1B2723;
+    border-radius: 25px;
+
+}
+
+.register-text {
+    width: max-content;
+    height: 50px;
+    left: 10px;
+    top: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background: transparent;
+    border: 0ch;
+}
+
+.log-text {
+    position: absolute;
+    width: 250px;
+    height: 55px;
+    left: 10px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.log-btn {
+    position: absolute;
+    width: 100px;
+    height: 55px;
+    right: 10px;
+    top: 1px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 45%;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: blue;
+}
+
+.lg-container {
+    position: absolute;
+    width: 320px;
+    height: 55px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 630px;
+    background: transparent;
+}
+
+.log-btn:hover {
+    font-size: large;
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .register_header {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .register-username {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .register-phnumber {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .register-password {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .register-email {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,45 @@
+.header__container {
+    height: 100%;
+    position: relative;
+}
+
+.sell_button {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    left: 404px;
+    top: 860px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #b11a07;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 922px) {
+    .sell_button {
+        position: absolute;
+        width: 450px;
+        height: 45px;
+        top: 670px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: #D9D9D9;
+        border-radius: 25px;
+        cursor: pointer;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 48px;
+        justify-content: center;
+    }
+}
