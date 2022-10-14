@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { verify } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { config } from "../config";
 
 export const validateToken = (
@@ -7,26 +7,15 @@ export const validateToken = (
   res: Response,
   next: NextFunction
 ) => {
-
-  const token = req.headers.authorization?.split(" ")[1];
-
-  if (!token) {
-    return res
-      .status(401)
-      .json({ msg: "Unauthorized Request!", success: false });
-  }
   try {
-    verify(token, config.JWT_SECRET, (err, decoded: any) => {
-      if (err || !decoded) {
-        console.log(err);
-        return res
-          .status(401)
-          .json({ msg: "Unauthorized Request!", success: false });
-      } else {
-        req.user = decoded?.user || decoded;
-        next();
-      }
-    });
+    const token = req.headers.authorization?.split(" ")[1];
+
+    let decodedData: any;
+    if (token) {
+      decodedData = jwt.verify(token, config.JWT_SECRET);
+      req.user.id = decodedData?.id;
+    }
+    next();
   } catch (err: any) {
     console.error(
       "Internal authentication error - error in token validation middleware"
@@ -34,3 +23,22 @@ export const validateToken = (
     res.status(500).json({ msg: "Internal authentication error" });
   }
 };
+
+// export const currentUser = (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   if (!req.session?.jwt) {
+//     return next();
+//   } else {
+//     try {
+//       const payload = jwt.verify(req.session.jwt, config.JWT_SECRET);
+//       req.session.currentUser = payload;
+//     } catch (err) {
+//       console.error("Internal authentication error");
+//       res.status(500).json({ msg: "Internal authentication error" });
+//     }
+//     next();
+//   }
+// };

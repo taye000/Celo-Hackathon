@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
 import { validationResult } from "express-validator";
-import { sign } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { config } from "../config";
 import { createWallet } from "./wallet";
 import { User } from "../model";
 
+//Register user
 export const register = async (req: Request, res: Response) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -18,23 +19,22 @@ export const register = async (req: Request, res: Response) => {
     return res.status(400).json(_errors);
   }
 
-  let { phonenumber } = req.body;
+  let { username, phonenumber, email, password } = req.body;
 
-  if (await User.exists({ phonenumber })) {
+  const existingUser = await User.findOne({ phonenumber });
+  if (existingUser) {
     return res.status(400).json({ msg: "User already exists", success: false });
   }
 
   //create wallet address and private key which will be saved
-  let details = await createWallet();
+  let details: any = await createWallet();
   let walletAddress = details.walletAddress.toString();
   let privateKey = details.walletAddress.toString();
 
   console.log({ walletAddress, privateKey });
 
-  console.log(req.body);
-
   try {
-    const user = new User({
+    const user = await User.create({
       username: req.body.username,
       phonenumber: req.body.phonenumber,
       email: req.body.email,
@@ -47,20 +47,21 @@ export const register = async (req: Request, res: Response) => {
 
     console.log({ dataSaved });
 
-    const payload = {
-      user: {
-        id: user.id,
-      },
-    };
-    sign(
-      payload,
+    //sign in the user
+    const token = jwt.sign(
+      { phonenumber: user.phonenumber, id: user.id },
       config.JWT_SECRET,
       {
         expiresIn: config.JWT_TOKEN_EXPIRES_IN,
       },
       (err) => {
         if (err) throw err;
-        res.status(200).json({ dataSaved, msg:"user registered successfully" , success: true });
+        res.status(200).json({
+          user,
+          token,
+          msg: "user registered successfully",
+          success: true,
+        });
       }
     );
   } catch (err: any) {

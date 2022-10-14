@@ -11,7 +11,7 @@ export const connectDB = async () => {
       socketTimeOutMS: 60000,
     };
     const db = await connect(config.MONGO_URI, options);
-    console.log("connected to DB");
+    console.log("connecting to DB");
     return db;
   } catch (err: any) {
     console.error(err.message);

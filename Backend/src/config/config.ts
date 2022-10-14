@@ -10,7 +10,7 @@ export const config = {
   MONGO_URI: process.env.MONGO_URI!,
   JWT_SECRET: process.env.JWT_SECRET!,
   PORT: process.env.PORT!,
-  JWT_TOKEN_EXPIRES_IN: 3600000 * 24 * 7, //EXPIRES IN 7 DAYS
+  JWT_TOKEN_EXPIRES_IN: 3600000, //EXPIRES IN 1 HOUR
   consumer_secret: process.env.CONSUMER_SECRET!,
   consumer_key: process.env.CONSUMER_KEY!,
   short_code: 174379,

@@ -1,7 +1,7 @@
 import { Schema, model, Model } from "mongoose";
 import { IUser } from "../types";
 import { PasswordManager } from "../utils/passwordManager";
-import {encrypt} from "../utils"
+import { encrypt } from "../utils";
 
 //an interface that describes attributes a user model should have
 interface UserModel extends Model<IUser> {
@@ -68,6 +68,4 @@ UserSchema.statics.build = (attrs: IUser) => {
 };
 
 //creating user model
-const User = model<IUser>("User", UserSchema);
-
-export { User };
+export const User = model<IUser>("User", UserSchema);
