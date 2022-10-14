@@ -1,11 +1,10 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { validateToken } from "../../middleware";
 import { login } from "../../controller";
 
 const router = Router();
 
-router.get("/", validateToken);
+router.get("/");
 
 router.post(
   "/login",

@@ -7,6 +7,7 @@ import {
   tx_result,
 } from "../../controller/mpesaCallback";
 import { stk_push } from "../../controller/stk_push";
+import { validateToken } from "../../middleware/auth";
 
 const router = Router();
 
@@ -16,6 +17,7 @@ router.post("/callback/result", tx_result);
 router.post(
   "/stk_push",
   [check("amount", "please enter amount to send").not().isEmpty()],
+  validateToken,
   authToken,
   stk_push
 );
