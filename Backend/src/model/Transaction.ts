@@ -40,6 +40,4 @@ TransactionSchema.statics.build = (attrs: Transact) => {
 };
 
 //create model
-const Transaction = model<Transact>("Transaction", TransactionSchema);
-
-export { Transaction };
+export const Transaction = model<Transact>("Transaction", TransactionSchema);

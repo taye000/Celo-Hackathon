@@ -2,7 +2,6 @@ import { validationResult } from "express-validator";
 import jwt from "jsonwebtoken";
 import { config } from "../config";
 import { User } from "../model";
-import { IUser } from "../types";
 import { PasswordManager } from "../utils/passwordManager";
 
 //Authenticate user and get session token
