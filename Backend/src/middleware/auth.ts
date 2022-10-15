@@ -13,7 +13,7 @@ export const validateToken = (
     let decodedData: any;
     if (token) {
       decodedData = jwt.verify(token, config.JWT_SECRET);
-      req.user.id = decodedData?.id;
+      req.userId = decodedData?.id;
     }
     next();
   } catch (err: any) {
