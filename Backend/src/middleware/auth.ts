@@ -23,22 +23,3 @@ export const validateToken = (
     res.status(500).json({ msg: "Internal authentication error" });
   }
 };
-
-// export const currentUser = (
-//   req: Request,
-//   res: Response,
-//   next: NextFunction
-// ) => {
-//   if (!req.session?.jwt) {
-//     return next();
-//   } else {
-//     try {
-//       const payload = jwt.verify(req.session.jwt, config.JWT_SECRET);
-//       req.session.currentUser = payload;
-//     } catch (err) {
-//       console.error("Internal authentication error");
-//       res.status(500).json({ msg: "Internal authentication error" });
-//     }
-//     next();
-//   }
-// };
