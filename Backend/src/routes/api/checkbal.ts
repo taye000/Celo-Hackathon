@@ -8,7 +8,7 @@ const router = Router();
 router.post(
   "/checkbalance",
   [
-    check("phonenumber", "please enter phonenumber to chcek balance").not().isEmpty(),
+    check("phonenumber", "please enter phonenumber to check your balance").not().isEmpty(),
   ],
   validateToken,
   getBal
