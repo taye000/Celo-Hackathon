@@ -66,9 +66,17 @@ export const register = async (req: Request, res: Response) => {
     );
   } catch (err: any) {
     console.error(err.message);
-    return res
-      .status(500)
-      .json({ msg: "Internal server error", success: false });
+    return res.status(404).json({ msg: err.message, success: false });
+  }
+};
+
+export const getUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await User.find();
+    res.status(200).json(users);
+  } catch (err: any) {
+    console.error(err.message);
+    res.status(404).json({ msg: err.message, success: false });
   }
 };
 

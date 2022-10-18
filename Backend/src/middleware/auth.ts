@@ -8,7 +8,7 @@ export const validateToken = (
   next: NextFunction
 ) => {
   try {
-    const token = req.headers.authorization?.split(" ")[1];
+    const token = (req.headers.Authorization as string)?.split(" ")[1];
 
     let decodedData: any;
     if (token) {
